@@ -33,12 +33,55 @@ caso ela seja menor que o buffer passado eu guardo o resto da linha e concateno 
 char	extract_line(char *str)
 {
 	size_t	i;
+	char	*line;
 
 	if (!str)
-	return (NULL);
-	while(str[i] != '\0' || str[i] != '\n')
+		return (NULL);
+	while (str[i] != '\0' || str[i] != '\n')
 		i++;
+	if (str[i] == '\n')
+		line = (char *)ft_calloc((i + 1), sizeof(char));
+	if (!line)
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0' && str[i] != '\n')
+	{
+		line[i] = str[i];
+		i++;
+	}
+	if (str[i] == '\n')
+	{
+		line[i] == str[i];
+		i++;
+	}
+	line[i] = '\0';
+	return (line);
+}
 
+char	rest_line(char *str)
+{
+	size_t	i;
+	size_t	j;
+	char	*newline;
+
+	i = 0;
+	while (str[i] && str[i] != '\0' && str[i] !='\n')
+		i++;
+	if (str[i] == '\0')
+	{
+		free(str);
+		return (NULL);
+	}
+	newline = ft_calloc(ft_strlen(str) + i + 2);
+	i++;
+	j = 0;
+	while (str)
+	{
+		newline[j++] = str[i++];
+	}
+	free (str);
+	newline = '\0';
+	return (newline);
 }
 int	get_next_line(int fd)
 {
