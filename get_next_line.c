@@ -31,7 +31,7 @@ char	*extract_line(char *str)
 	}
 	if (str[i] == '\n')
 	{
-		line[i] == str[i];
+		line[i] = str[i];
 		i++;
 	}
 	line[i] = '\0';
@@ -98,7 +98,7 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	str = readfile(fd, str);
+	str = read_file(fd, str);
 	if (!str)
 		return (NULL);
 	if (str[0] == '\0')

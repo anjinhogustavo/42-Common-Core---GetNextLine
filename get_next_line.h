@@ -28,7 +28,7 @@ char	*rest_line(char *str);
 char	*read_file(int fd, char *str);
 char	*get_next_line(int fd);
 char	*ft_strchr(const char *str, int c);
-char	ft_strjoin(const char *s1, const char *s2);
+char	*ft_strjoin(char *s1, char *s2);
 void	*ft_calloc(size_t nitems, size_t size);
 char	*ft_strdup(char *s);
 

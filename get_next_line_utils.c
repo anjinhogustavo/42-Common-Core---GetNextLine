@@ -55,15 +55,14 @@ char	*ft_strchr(const char *str, int c)
 	return ((char *)&str[i]);
 }
 
-char	ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(char *s1, char *s2)
 {
 	unsigned int	i;
 	unsigned int	j;
 	char			*new;
 
-	if (!s1 || !s2)
-		return (NULL);
-	new = (char *)malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	new = ft_calloc(((ft_strlen((char *)s1) + ft_strlen((char *)s2))
+				+ 1), sizeof(char));
 	if (!new)
 		return (NULL);
 	while (i < ft_strlen(s1))
@@ -78,6 +77,7 @@ char	ft_strjoin(const char *s1, const char *s2)
 		j++;
 	}
 	new[i + j] = '\0';
+	free((void *)s1);
 	return (new);
 }
 
@@ -86,7 +86,7 @@ char	*ft_strdup(char *s)
 	char	*str;
 	size_t	i;
 
-	str = (char *)malloc(sizeof(char) * (ftstrlen((char *)s) + 1));
+	str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
 	if (!str)
 		return (NULL);
 	i = 0;
