@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ganjinho <ganjinho@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-05-30 11:57:46 by ganjinho          #+#    #+#             */
-/*   Updated: 2024-05-30 11:57:46 by ganjinho         ###   ########.fr       */
+/*   Created: 2024-07-12 10:13:30 by ganjinho          #+#    #+#             */
+/*   Updated: 2024-07-12 10:13:30 by ganjinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*extract_line(char *str)
 {
@@ -38,49 +38,51 @@ char	*extract_line(char *str)
 	return (line);
 }
 
-char	*rest_line(char *str)
+char	*ft_newstr(char *str)
 {
-	size_t	i;
-	size_t	j;
-	char	*newline;
+	char	*word;
+	int		i;
+	int		j;
 
 	i = 0;
-	while (str[i] && str[i] != '\0' && str[i] != '\n')
+	while (str && str[i] && str[i] != '\n')
 		i++;
 	if (str[i] == '\0')
 	{
 		free(str);
 		return (NULL);
 	}
-	newline = ft_calloc((ft_strlen(str) - i + 1), sizeof(char));
+	word = ft_calloc((ftstrlen(str) - i + 1), sizeof(char));
+	if (!word)
+		return (NULL);
 	i++;
 	j = 0;
 	while (str[i])
-		newline[j++] = str[i++];
-	newline = '\0';
-	free (str);
-	return (newline);
+		word[j++] = str[i++];
+	word[j] = '\0';
+	free(str);
+	return (word);
 }
 
-char	*read_file(int fd, char *str)
+char	*readfile(int fd, char *str)
 {
 	char	*buffer;
-	int		count;
+	int		counter;
 
-	buffer = ft_calloc(((BUFFER_SIZE + 1)), sizeof(char));
+	buffer = ft_calloc((BUFFER_SIZE + 1), sizeof(char));
 	if (!buffer)
 		return (NULL);
-	count = 1;
-	while (count != 0)
+	counter = 1;
+	while (counter != 0)
 	{
-		count = read(fd, buffer, BUFFER_SIZE);
-		if (count < 0 )
+		counter = read(fd, buffer, BUFFER_SIZE);
+		if (counter < 0)
 		{
 			free(buffer);
 			free(str);
 			return (NULL);
 		}
-		buffer[count] = '\0';
+		buffer[counter] = '\0';
 		if (!str)
 			str = ft_strdup("");
 		str = ft_strjoin(str, buffer);
@@ -93,22 +95,54 @@ char	*read_file(int fd, char *str)
 
 char	*get_next_line(int fd)
 {
-	static char		*str;
+	static char		*str[4096];
 	char			*reader;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	str = readfile(fd, str);
-	if (!str)
+	str[fd] = readfile(fd, str[fd]);
+	if (!str[fd])
 		return (NULL);
-	if (str[0] == '\0')
+	if (str[fd][0] == '\0')
 	{
-		free(str);
+		free(str[fd]);
 		return (NULL);
 	}
-	reader = extract_line(str);
+	reader = extract_line(str[fd]);
 	if (!reader)
 		return (NULL);
-	str = rest_line(str);
+	str[fd] = ft_newstr(str[fd]);
 	return (reader);
 }
+
+/* #include <stdio.h>
+int	main(void)
+{
+	char	*line;
+	int		i;
+	int		fd1;
+	int		fd2;
+	int		fd3;
+
+	fd1 = open("test.txt", O_RDONLY);
+	fd2 = open("test2.txt", O_RDONLY);
+	fd3 = open("test3.txt", O_RDONLY);
+	i = 1;
+	while (i < 7)
+	{
+		line = get_next_line(fd1);
+		printf("line [%02d]: %s", i, line);
+		free(line);
+		line = get_next_line(fd2);
+		printf("line [%02d]: %s", i, line);
+		free(line);
+		line = get_next_line(fd3);
+		printf("line [%02d]: %s", i, line);
+		free(line);
+		i++;
+	}
+	close(fd1);
+	close(fd2);
+	close(fd3);
+	return (0);
+} */

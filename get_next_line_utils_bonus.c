@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ganjinho <ganjinho@student.42.fr>          #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024-06-01 12:28:50 by ganjinho          #+#    #+#             */
-/*   Updated: 2024-06-01 12:28:50 by ganjinho         ###   ########.fr       */
+/*   Created: 2024-07-12 09:50:49 by ganjinho          #+#    #+#             */
+/*   Updated: 2024-07-12 09:50:49 by ganjinho         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
-size_t	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (str && str[i] != 0)
+		i++;
+	return (i);
+}
+
+char	*ft_strchr(const char *str, int c)
+{
+	int	i;
+
+	i = 0;
+	while (str && str[i] != (char)c)
 	{
+		if (!str[i])
+			return (NULL);
 		i++;
 	}
-	return (i);
+	return ((char *)&str[i]);
 }
 
 void	*ft_calloc(size_t nitems, size_t size)
@@ -41,21 +53,7 @@ void	*ft_calloc(size_t nitems, size_t size)
 	return (memory);
 }
 
-char	*ft_strchr(const char *str, int c)
-{
-	int	i;
-
-	i = 0;
-	while (str && str[i] != (char)c)
-	{
-		if (!str[i])
-			return (NULL);
-		i++;
-	}
-	return ((char *)&str[i]);
-}
-
-char	ft_strjoin(const char *s1, const char *s2)
+char	*ft_strjoin(const char *s1, const char *s2)
 {
 	unsigned int	i;
 	unsigned int	j;
