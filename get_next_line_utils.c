@@ -61,6 +61,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	unsigned int	j;
 	char			*new;
 
+	i = 0;
 	new = ft_calloc(((ft_strlen((char *)s1) + ft_strlen((char *)s2))
 				+ 1), sizeof(char));
 	if (!new)
@@ -71,7 +72,7 @@ char	*ft_strjoin(char *s1, char *s2)
 		i++;
 	}
 	j = 0;
-	while (j < ft_strlen)
+	while (j < ft_strlen(s2))
 	{
 		new[i + j] = s2[j];
 		j++;

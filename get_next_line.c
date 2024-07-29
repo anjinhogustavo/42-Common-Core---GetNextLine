@@ -14,15 +14,16 @@
 
 char	*extract_line(char *str)
 {
-	size_t	i;
+	int	i;
 	char	*line;
 
-	while (str[i] != '\0' || str[i] != '\n')
+	i = 0;
+	while (str[i] && str[i] != '\n')
 		i++;
 	if (str[i] == '\n')
 		line = (char *)ft_calloc((i + 2), sizeof(char));
-	if (!line)
-		return (NULL);
+		if (!line)
+	return (NULL);
 	i = 0;
 	while (str[i] != '\0' && str[i] != '\n')
 	{
@@ -40,8 +41,8 @@ char	*extract_line(char *str)
 
 char	*rest_line(char *str)
 {
-	size_t	i;
-	size_t	j;
+	int	i;
+	int	j;
 	char	*newline;
 
 	i = 0;
@@ -53,11 +54,13 @@ char	*rest_line(char *str)
 		return (NULL);
 	}
 	newline = ft_calloc((ft_strlen(str) - i + 1), sizeof(char));
+	if (!newline)
+	return (NULL);
 	i++;
 	j = 0;
 	while (str[i])
 		newline[j++] = str[i++];
-	newline = '\0';
+	newline[j] = '\0';
 	free (str);
 	return (newline);
 }
@@ -112,3 +115,29 @@ char	*get_next_line(int fd)
 	str = rest_line(str);
 	return (reader);
 }
+#include <stdio.h>
+#include <fcntl.h>
+/*int main(void)
+{
+	char *line;
+	int i;
+	int fd1;
+
+	fd1 = open("test.txt", O_RDONLY);
+	if (fd1 == -1) {
+		perror("Error opening file");
+		return (1);
+	}
+	i = 1;
+	printf("Buffer size > %d\n", BUFFER_SIZE);
+	line = get_next_line(fd1);
+	while (line != 0)
+	{
+		printf("line [%02d]:%s\n", i, line);
+		free(line);
+		line = get_next_line(fd1);
+		i++;
+	}
+	close(fd1);
+	return (0);
+}*/
