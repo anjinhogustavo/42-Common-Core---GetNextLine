@@ -17,30 +17,12 @@ size_t	ft_strlen(char *str)
 	size_t	i;
 
 	i = 0;
+	if (!str)
+		return (0);
 	while (str[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
-
-void	*ft_calloc(size_t nitems, size_t size)
-{
-	char	*memory;
-	size_t	i;
-
-	i = 0;
-	memory = malloc(nitems * size);
-	if (memory == NULL)
-		return (0);
-	while (i < nitems * size)
-	{
-		memory[i] = 0;
-		i++;
-	}
-	return (memory);
-}
-
 char	*ft_strchr(const char *str, int c)
 {
 	int	i;
@@ -57,45 +39,28 @@ char	*ft_strchr(const char *str, int c)
 
 char	*ft_strjoin(char *s1, char *s2)
 {
-	unsigned int	i;
-	unsigned int	j;
-	char			*new;
-
-	i = 0;
-	new = ft_calloc(((ft_strlen((char *)s1) + ft_strlen((char *)s2))
-				+ 1), sizeof(char));
-	if (!new)
-		return (NULL);
-	while (i < ft_strlen(s1))
-	{
-		new[i] = s1[i];
-		i++;
-	}
-	j = 0;
-	while (j < ft_strlen(s2))
-	{
-		new[i + j] = s2[j];
-		j++;
-	}
-	new[i + j] = '\0';
-	free((void *)s1);
-	return (new);
-}
-
-char	*ft_strdup(char *s)
-{
-	char	*str;
 	size_t	i;
+	size_t	c;
+	char	*str;
 
-	str = (char *)malloc(sizeof(char) * (ft_strlen((char *)s) + 1));
-	if (!str)
-		return (NULL);
-	i = 0;
-	while (s[i] != 0)
+	if (!s1)
 	{
-		str[i] = s[i];
-		i++;
+		s1 = (char *)malloc(1 * sizeof(char));
+		s1[0] = '\0';
 	}
-	str[i] = '\0';
+	if (!s1 || !s2)
+		return (NULL);
+	str = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	i = -1;
+	c = 0;
+	if (s1)
+		while (s1[++i] != '\0')
+			str[i] = s1[i];
+	while (s2[c] != '\0')
+		str[i++] = s2[c++];
+	str[ft_strlen(s1) + ft_strlen(s2)] = '\0';
+	free(s1);
 	return (str);
 }
