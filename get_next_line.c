@@ -14,7 +14,7 @@
 
 char	*extract_line(char *str)
 {
-	int	i;
+	int		i;
 	char	*line;
 
 	i = 0;
@@ -42,8 +42,8 @@ char	*extract_line(char *str)
 
 char	*rest_line(char *str)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	*newline;
 
 	i = 0;
@@ -127,7 +127,7 @@ int main(void)
 		return (1);
 	}
 	i = 1;
-	printf("bufferer size > %d\n", bufferER_SIZE);
+	printf("buffer size > %d\n", BUFFER_SIZE);
 	line = get_next_line(file);
 	while (line != 0)
 	{
