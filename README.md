@@ -2,6 +2,10 @@
 	Get_next_line
 </h1>
 
+<p align="center">
+	<b><i>Reading a line on a fd is way too tedious</i></b><br>
+</p>
+
 ![Image](https://miro.medium.com/v2/resize:fit:828/format:webp/1*FpnSkgmAEmxRlnLBRclqYw.png)
 
 <h3 align="center">
@@ -21,19 +25,22 @@
 	<img src="https://user-images.githubusercontent.com/101434516/202159991-adaddef4-8289-4e32-8fe2-c447b73e665e.png">
 </div>
 
-## 🗣️ About
+## 📝 About 
 
-> _This project aims to code a C function that can read multiple lines from a file._
-
+> _This project is about programming a function that allows you to read content line by line. This is done by returning a line read from a file descriptor.
 <br>
 
-# Great Resources for Get_next_line
+# 📚 Great Resources for Get_next_line 
 
 [42-Gitbook](https://42-cursus.gitbook.io/guide)
 
 [Learn C](https://www.learn-c.org/)
 
 [Makefile tutor](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
+
+# 🎥 Videos 
+[Oceano - Get_Next_Line](https://www.youtube.com/watch?v=8E9siq7apUU&pp=ygUQZ2V0IG5leHQgbGluZSA0Mg%3D%3D>)
+[Nikito - Understanding Get_Next_Line](https://www.youtube.com/watch?v=-Mt2FdJjVno&pp=ygUQZ2V0IG5leHQgbGluZSA0Mg%3D%3D)
 
 
 	🚀 This project consists of coding basic C functions (see below), which are then compiled
@@ -68,7 +75,7 @@ $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_l
 ```
 **3. Running Tests**
 ```
-./gnl < file.txt
+./gnl file.txt
 ```
 
 ## 📋 Tester
@@ -77,3 +84,4 @@ $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_l
 
 * [xicodomingues/francinette](https://github.com/xicodomingues/francinette)
 * [gnl-station-tester](https://github.com/kodpe/gnl-station-tester)
+* [Tripouille/gnltester](https://github.com/Tripouille/gnlTester)
