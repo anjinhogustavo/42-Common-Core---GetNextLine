@@ -46,11 +46,10 @@
 
 
 
-
 	🚀 This project consists of coding basic C functions (see below), which are then compiled
 	into a library for use in other cursus projects.
 
-
+ 
 ## 🛠️ Usage
 
 ### Requirements
