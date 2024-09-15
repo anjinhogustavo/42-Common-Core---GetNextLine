@@ -28,9 +28,14 @@
 </div>
 
 
+<div align="center">
+
 | Get_Next_Line | Grade | Evaluation Information |
 | :--- | :--- | :--- |
 | [Get_Next_Line](https://github.com/anjinhogustavo/42-Common-Core---GetNextLine/blob/main/get_next_line.c) | <img src="https://img.shields.io/badge/112%20%2F%20100-success"/> | `3 peers` `30 mins` `moulinette` |
+
+</div>
+
 
 ## 📝 About 
 
