@@ -1,9 +1,8 @@
 <h1 align="center">
 	Get_next_line
 </h1>
-<div align="center">
-	![Image](https://miro.medium.com/v2/resize:fit:828/format:webp/1*FpnSkgmAEmxRlnLBRclqYw.png)
-</div>
+
+![Image](https://miro.medium.com/v2/resize:fit:828/format:webp/1*FpnSkgmAEmxRlnLBRclqYw.png)
 
 <p align="center">
 
@@ -20,9 +19,9 @@
 ---
 <br>
 
-<div align="center">
-	<img src="(https://github.com/user-attachments/assets/4be0aad2-6b9a-4253-9435-661cce7a4879))">
-</div>!
+
+<img src="(https://github.com/user-attachments/assets/4be0aad2-6b9a-4253-9435-661cce7a4879))">
+
 
 ## 🗣️ About
 
