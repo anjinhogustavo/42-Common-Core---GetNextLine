@@ -18,7 +18,7 @@
 <be>
 
 <div align="center">
-	<img src="https://github.com/MarkosComK/42-Libft/assets/67120870/10a2a298-340e-4a67-96bd-d97716a60526(https://user-images.githubusercontent.com/101434516/202159991-adaddef4-8289-4e32-8fe2-c447b73e665e.png)">
+	<img src="https://user-images.githubusercontent.com/101434516/202159991-adaddef4-8289-4e32-8fe2-c447b73e665e.png">
 </div>
 
 ## 🗣️ About
