@@ -27,6 +27,8 @@
 	<img src="https://user-images.githubusercontent.com/101434516/202159991-adaddef4-8289-4e32-8fe2-c447b73e665e.png">
 </div>
 
+* | [Get_Next_Line]((https://github.com/anjinhogustavo/42-Common-Core---GetNextLine/blob/main/get_next_line.c)) | <img src="https://img.shields.io/badge/112%20%2F%20100-success"/> | `3 peers` `30 mins` `moulinette` |
+
 ## 📝 About 
 
 > _This project is about programming a function that allows you to read content line by line. This is done by returning a line read from a file descriptor.
@@ -92,5 +94,3 @@ $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_l
 * [xicodomingues/francinette](https://github.com/xicodomingues/francinette)
 * [gnl-station-tester](https://github.com/kodpe/gnl-station-tester)
 * [Tripouille/gnltester](https://github.com/Tripouille/gnlTester)
-
-* | [Get_Next_Line]((https://github.com/anjinhogustavo/42-Common-Core---GetNextLine/blob/main/get_next_line.c)) | <img src="https://img.shields.io/badge/112%20%2F%20100-success"/> | `3 peers` `30 mins` `moulinette` |
