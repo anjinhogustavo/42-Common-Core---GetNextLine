@@ -74,9 +74,10 @@ To compile the function:
 $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
 ```
 
-```Header
+```C
 #include "get_next_line.h"
 ```
+
 **3. Running Tests**
 ```
 ./gnl file.txt
@@ -84,7 +85,7 @@ $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_l
 
 ## 📋 Tester
 
-**Here some third party testers that you can use.**
+**Here testers that you can use.**
 
 * [xicodomingues/francinette](https://github.com/xicodomingues/francinette)
 * [gnl-station-tester](https://github.com/kodpe/gnl-station-tester)
