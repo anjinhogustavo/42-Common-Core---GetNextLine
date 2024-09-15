@@ -4,8 +4,6 @@
 
 ![Image](https://miro.medium.com/v2/resize:fit:828/format:webp/1*FpnSkgmAEmxRlnLBRclqYw.png)
 
-<p align="center">
-
 <h3 align="center">
 	<a href="#%EF%B8%8F-about">About</a>
 	<span> · </span>
@@ -17,11 +15,11 @@
 </h3>
 
 ---
-<br>
+<be>
 
-
-<img src="(https://github.com/user-attachments/assets/4be0aad2-6b9a-4253-9435-661cce7a4879))">
-
+<div align="center">
+	<img src="https://github.com/MarkosComK/42-Libft/assets/67120870/10a2a298-340e-4a67-96bd-d97716a60526(https://user-images.githubusercontent.com/101434516/202159991-adaddef4-8289-4e32-8fe2-c447b73e665e.png)">
+</div>
 
 ## 🗣️ About
 
