@@ -6,7 +6,9 @@
 	<b><i>Reading a line on a fd is way too tedious</i></b><br>
 </p>
 
-![Image](https://miro.medium.com/v2/resize:fit:828/format:webp/1*FpnSkgmAEmxRlnLBRclqYw.png)
+<p align="center">
+  <img src="https://miro.medium.com/v2/resize:fit:828/format:webp/1*FpnSkgmAEmxRlnLBRclqYw.png" alt="Image">
+</p>
 
 <h3 align="center">
 	<a href="#%EF%B8%8F-about">About</a>
@@ -71,7 +73,7 @@ The Get-next-line is written in C language and thus needs the **`gcc` compiler**
 To compile the function:
 
 ```shell
-$ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
+$ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_line.c get_next_line_utils.c
 ```
 
 ```C
