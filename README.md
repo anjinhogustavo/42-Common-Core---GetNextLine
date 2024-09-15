@@ -68,12 +68,13 @@ The Get-next-line is written in C language and thus needs the **`gcc` compiler**
 ```
 **2. Compiling the Get-next-line**
 
-To compile the function, run:
+To compile the function:
 
 ```shell
 $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=32 get_next_line.c get_next_line_utils.c
+```
 
-```C
+```Header
 #include "get_next_line.h"
 ```
 **3. Running Tests**
