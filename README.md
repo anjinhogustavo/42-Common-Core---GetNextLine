@@ -39,8 +39,12 @@
 [Makefile tutor](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
 
 # 🎥 Videos 
+
 [Oceano - Get_Next_Line](https://www.youtube.com/watch?v=8E9siq7apUU&pp=ygUQZ2V0IG5leHQgbGluZSA0Mg%3D%3D>)
+
 [Nikito - Understanding Get_Next_Line](https://www.youtube.com/watch?v=-Mt2FdJjVno&pp=ygUQZ2V0IG5leHQgbGluZSA0Mg%3D%3D)
+
+
 
 
 	🚀 This project consists of coding basic C functions (see below), which are then compiled
