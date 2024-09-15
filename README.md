@@ -92,3 +92,5 @@ $ cd path/to/get-next-line cc -Wall -Wextra -Werror -D BUFFER_SIZE=42 get_next_l
 * [xicodomingues/francinette](https://github.com/xicodomingues/francinette)
 * [gnl-station-tester](https://github.com/kodpe/gnl-station-tester)
 * [Tripouille/gnltester](https://github.com/Tripouille/gnlTester)
+
+* | [Get_Next_Line]((https://github.com/anjinhogustavo/42-Common-Core---GetNextLine/blob/main/get_next_line.c)) | <img src="https://img.shields.io/badge/112%20%2F%20100-success"/> | `3 peers` `30 mins` `moulinette` |
